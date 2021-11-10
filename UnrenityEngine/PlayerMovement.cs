@@ -20,7 +20,22 @@ namespace UnrenityEngine
 
         public static void MoveLeft(int force, PlayerCharacter player, Image runSprite)
         {
+            player.Image = runSprite;
+            player.Left -= force;
+            player.Update();
+        }
 
+        public static void MoveDown(int force, PlayerCharacter player, Image runSprite)
+        {
+            player.Image = runSprite;
+            player.Top -= force;
+            player.Update();
+        }
+        public static void MoveUp(int force, PlayerCharacter player, Image runSprite)
+        {
+            player.Image = runSprite;
+            player.Top += force;
+            player.Update();
         }
     }
 }
